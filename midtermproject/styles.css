@@ -1,0 +1,92 @@
+/* Базовые настройки и переменные */
+:root {
+    --bg-dark: #0f172a;
+    --sidebar-bg: #1e293b;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-green: #10b981;
+    --accent-purple: #8b5cf6;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout: CSS Grid для структуры Sidebar + Main Content */
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+/* Sidebar с использованием sticky positioning */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    border-right: 1px solid #334155;
+}
+
+.sidebar .nav-link {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--accent-green);
+}
+
+/* Основной контент */
+.main-content {
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* Карточки - Flexbox */
+.stat-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #334155;
+}
+
+/* Медиа-запросы для адаптивности (Tablet & Mobile) */
+@media (max-width: 992px) {
+    .dashboard-layout {
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        position: relative;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #334155;
+    }
+    /* Использование flexbox для горизонтального меню на мобильных */
+    .sidebar .nav {
+        flex-direction: row;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+    .sidebar .nav-item {
+        white-space: nowrap;
+    }
+}

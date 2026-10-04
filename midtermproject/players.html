@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игроки - MatchIQPro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <h4 class="text-success mb-4">⚽ MatchIQPro</h4>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="index.html">Дашборд</a>
+                <a class="nav-link" href="matches.html">Матчи</a>
+                <a class="nav-link" href="standings.html">Турниры</a>
+                <a class="nav-link active" href="players.html">Игроки</a>
+                <a class="nav-link" href="analytics.html">AI Аналитика</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h2 class="mb-4">База игроков</h2>
+            <section class="row g-4">
+                <div class="col-md-6">
+                    <div class="stat-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-secondary me-3" style="width: 50px; height: 50px;"></div>
+                            <div>
+                                <h5>Джуд Беллингем</h5>
+                                <span class="badge bg-success">ЭЛИТА</span>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="d-flex justify-content-between"><small>Голы (xG: 12.4)</small><small>16</small></div>
+                            <div class="progress bg-dark" style="height: 6px;"><div class="progress-bar bg-success" style="width: 80%"></div></div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="d-flex justify-content-between"><small>Точность передач</small><small>89%</small></div>
+                            <div class="progress bg-dark" style="height: 6px;"><div class="progress-bar bg-purple" style="width: 89%; background-color: var(--accent-purple)"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
